@@ -9,254 +9,32 @@ body {
   width: 50%;
   height: 75%;
 }
-header {
-  position: relative;
-}
-.navbar {
-  height: 80px;
-}
+
 .navbar-menu {
   margin-left: 50rem;
 }
-.nav-item {
-  background: #000;
-  margin-left: 1rem;
+@media (min-width: 469px) {
+  header {
+    display: none;
+  }
+  .info_section {
+    display: none;
+  }
+  .title-page {
+    display: none;
+  }
 }
-.hamburger {
-  display: none;
-}
-
-.close {
-  display: none;
-}
-
-@media (max-width: 1026px) {
-  .post-container {
-    max-width: 100%;
+@media (min-width: 209px) and (max-width: 468px) {
+  header {
+    display: none;
+  }
+  .info_section {
+    display: none;
   }
   .title-page {
     display: none;
   }
   .courses {
-    display: none;
-  }
-  .form-post {
-    width: 100%;
-    padding: 0 auto;
-  }
-  .form-body {
-    background-color: #000;
-  }
-  .input-group-text {
-    height: 50px;
-  }
-  #title {
-    height: 50px;
-  }
-  #body {
-    width: 100%;
-    height: 50px;
-  }
-
-  #post-form {
-    margin-bottom: 40px;
-    width: 100%;
-    height: 50%;
-  }
-  .card {
-    width: 90vw;
-  }
-  .card-body {
-    width: 90vw;
-  }
-  .info_section {
-    display: none;
-  }
-  .header-container {
-    display: none;
-  }
-}
-@media (max-width: 767px) and (min-width: 312px) {
-  .post-container {
-    max-width: 100%;
-  }
-  .title-page {
-    display: none;
-  }
-  .courses {
-    display: none;
-  }
-  .form-post {
-    width: 100%;
-    padding: 0 auto;
-  }
-  .form-body {
-    background-color: #000;
-  }
-  .input-group-text {
-    height: 50px;
-  }
-  #title {
-    height: 50px;
-  }
-  #body {
-    width: 100%;
-    height: 50px;
-  }
-
-  #post-form {
-    margin-bottom: 80px;
-    width: 100%;
-    height: 50%;
-  }
-  .card {
-    width: 90vw;
-  }
-  .card-body {
-    width: 90vw;
-  }
-  .info_section {
-    display: none;
-  }
-  .header-container {
-    display: none;
-  }
-}
-@media (max-width: 667px) and (min-width: 268px) {
-  .post-container {
-    max-width: 100%;
-  }
-  .title-page {
-    display: none;
-  }
-  .courses {
-    display: none;
-  }
-  .form-post {
-    width: 100%;
-    padding: 0 auto;
-  }
-  .form-body {
-    background-color: #000;
-  }
-  .input-group-text {
-    height: 50px;
-  }
-  #title {
-    height: 50px;
-  }
-  #body {
-    width: 100%;
-    height: 50px;
-  }
-
-  #post-form {
-    margin-bottom: 40px;
-    width: 100%;
-    height: 50%;
-  }
-  .card {
-    width: 90vw;
-  }
-  .card-body {
-    width: 90vw;
-  }
-  .info_section {
-    display: none;
-  }
-  .header-container {
-    display: none;
-  }
-}
-@media (max-width: 1200px) and (min-width: 768px) {
-  .post-container {
-    max-width: 100%;
-  }
-  .title-page {
-    display: none;
-  }
-  .courses {
-    display: none;
-  }
-  .form-post {
-    width: 100%;
-    padding: 0 auto;
-  }
-  .form-body {
-    background-color: #000;
-  }
-  .input-group-text {
-    height: 50px;
-  }
-  #title {
-    height: 50px;
-  }
-  #body {
-    width: 100%;
-    height: 50px;
-  }
-
-  #post-form {
-    margin-bottom: 10px;
-    width: 100%;
-    height: 50%;
-  }
-  .card {
-    width: 90vw;
-  }
-  .card-body {
-    width: 90vw;
-  }
-  .info_section {
-    display: none;
-  }
-  .header-container {
-    display: none;
-  }
-}
-@media (max-width: 1368px) and (min-width: 912px) {
-  .post-container {
-    max-width: 100%;
-  }
-  .title-page {
-    display: none;
-  }
-  .courses {
-    display: none;
-  }
-  .form-post {
-    width: 100%;
-    padding: 0 auto;
-  }
-  .form-body {
-    background-color: #000;
-  }
-  .input-group-text {
-    height: 50px;
-  }
-  #title {
-    height: 50px;
-  }
-  #body {
-    width: 100%;
-    height: 50px;
-  }
-
-  #post-form {
-    margin-bottom: 10px;
-    width: 100%;
-    height: 50%;
-  }
-  .card {
-    width: 90vw;
-  }
-  .card-body {
-    width: 90vw;
-  }
-  .info_section {
-    display: none;
-  }
-  .header-container {
     display: none;
   }
 }
