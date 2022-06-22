@@ -1,20 +1,20 @@
 ("use strict");
-let postWrapper = document.querySelector("#post-holder");
+let postPage = document.querySelector("#post-holder");
 let title = document.querySelector("#title");
 let body = document.querySelector("#body");
 let postForm = document.querySelector("#post-form");
 
-let postBox = [];
-function getPosts() {
+let postArr = [];
+function getall() {
   fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => response.json())
     .then((data) => {
-      console.log(postBox);
-      postBox = data;
-      let postHolder = "";
-      postBox.forEach((post) => {
+      console.log(postArr);
+      postArr = data;
+      let postPackage = "";
+      postArr.forEach((post) => {
         console.log(post);
-        postHolder += `
+        postPackage += `
         <div class="container d-flex ">
         <div class="post-container">
         <div class="row" id="post-holder">
@@ -31,7 +31,7 @@ function getPosts() {
                     <i class="fa fa-trash"></i>
                     </button>                
                     <button type="button" class="border-0 bg-light text-primary text-capitalize" onclick="updatePost(${post.id})">edit</button>              
-                    <button type="button" class="text-success border-0 bg-light" onclick="openSingle(${post.id})">view</button>                
+                    <button type="button" class="text-success border-0 bg-light" onclick="openPage(${post.id})">view</button>                
                 </div>
               </div>
             </div>
@@ -40,10 +40,10 @@ function getPosts() {
       </div>  
       </div>`;
       });
-      postWrapper.innerHTML = postHolder;
+      postPage.innerHTML = postPackage;
     });
 }
-getPosts();
+getall();
 
 postForm.addEventListener("submit", createPost);
 
@@ -64,12 +64,12 @@ function createPost(e) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      postBox.unshift(data);
-      console.log(postBox);
-      let postHolder = "";
-      postBox.forEach((post) => {
+      postArr.unshift(data);
+      console.log(postArr);
+      let postPackage = "";
+      postArr.forEach((post) => {
         console.log(post);
-        postHolder += ` 
+        postPackage += ` 
         <div class="container d-flex ">
         <div class="post-container">
         <div class="row" id="post-holder">
@@ -86,7 +86,7 @@ function createPost(e) {
                     <i class="fa fa-trash"></i>
                     </button>                
                     <button type="button" class="border-0 bg-light text-primary text-capitalize" onclick="updatePost(${post.id})">edit</button>              
-                    <button type="button" class="text-success border-0 bg-light" onclick="openSingle(${post.id})">view</button>                
+                    <button type="button" class="text-success border-0 bg-light" onclick="openPage(${post.id})">view</button>                
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@ function createPost(e) {
       </div>  
       </div>`;
       });
-      postWrapper.innerHTML = postHolder;
+      postPage.innerHTML = postPackage;
     });
 }
 
@@ -133,7 +133,7 @@ function updatePost(id) {
       });
     });
 }
-function openSingle(id) {
+function openPage(id) {
   fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
     .then((response) => response.json())
     .then((data) => {
@@ -149,12 +149,12 @@ function deletePost(id) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      postBox = postBox.filter((post) => post.id !== id);
-      console.log(postBox);
-      let postHolder = "";
-      postBox.forEach((post) => {
+      postArr = postArr.filter((post) => post.id !== id);
+      console.log(postArr);
+      let postPackage = "";
+      postArr.forEach((post) => {
         console.log(post);
-        postHolder += `
+        postPackage += `
         <div class="container d-flex ">
         <div class="post-container">
         <div class="row" id="post-holder">
@@ -171,7 +171,7 @@ function deletePost(id) {
                     <i class="fa fa-trash"></i>
                     </button>                
                     <button type="button" class="border-0 bg-light text-primary " onclick="updatePost(${post.id})">edit</button>              
-                    <button type="button" class="text-success border-0 bg-light" onclick="openSingle(${post.id})">view</button>                
+                    <button type="button" class="text-success border-0 bg-light" onclick="openPage(${post.id})">view</button>                
                 </div>
               </div>
             </div>
@@ -180,6 +180,6 @@ function deletePost(id) {
       </div>  
       </div>`;
       });
-      postWrapper.innerHTML = postHolder;
+      postPage.innerHTML = postPackage;
     });
 }
