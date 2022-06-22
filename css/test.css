@@ -1,0 +1,17 @@
+body {
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#navbarSupportedContent {
+  margin-left: 50rem;
+}
+@media (max-width: 768px) {
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  .info_section {
+    display: none;
+  }
+}
