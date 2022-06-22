@@ -13,7 +13,7 @@ body {
 .navbar-menu {
   margin-left: 50rem;
 }
-@media (min-width: 469px) and (max-width: 1024px) {
+@media (min-width: 469px) and (max-width: 992px) {
   header {
     display: none;
   }
